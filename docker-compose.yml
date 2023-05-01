@@ -1,0 +1,18 @@
+services:
+  
+  db:
+    env_file:
+      - ./.env
+    image: postgres:14.5
+    ports:
+      - 5400:5432
+    volumes: 
+      - ./data/postgres_data_1:/var/lib/postgresql/data
+  
+  # api:
+  #   ports:
+  #     - 8001:8000
+  
+  # admin:
+  #   ports: 
+  #     - 8000:8000
